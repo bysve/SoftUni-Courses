@@ -1,4 +1,7 @@
-# SoftUni-Courses
+## SoftUni-Courses ##
+
 Courses from my education @ SoftUni
-Basic Syntax - Exercise
+
+01. Basic Syntax
+02. Data Types and Variables
 
