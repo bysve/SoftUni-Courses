@@ -16,7 +16,7 @@ function equalSums(arr) {
                 rightSum += arr[r];
             }
 
-            if (currentNum === leftSum && currentNum === rightSum) {
+            if (leftSum == rightSum) {
                 console.log(i);
                 equalSums = true;
             }
