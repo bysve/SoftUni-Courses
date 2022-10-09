@@ -1,23 +1,23 @@
-function addAndRemove(arr) {
+function addAndRemove(commands) {
 
-    let arrLength = arr.length;
-    let newArr = [];
+    let arrLength = commands.length;
+    let resultArr = [];
 
     for (let i = 0; i < arrLength; i++) {
-        let currentCommand = arr[i];
+        let currentCommand = commands[i];
         switch (currentCommand) {
             case 'add':
-                newArr.push(i + 1);
+                resultArr.push(i + 1);
                 break;
             case 'remove':
-                newArr.pop();
+                resultArr.pop();
                 break;
         }
     }
-    if (newArr.length === 0) {
+    if (resultArr.length === 0) {
         console.log('Empty');
     } else {
-        console.log(newArr.join(' '));
+        console.log(resultArr.join(' '));
     }
 }
 addAndRemove(['remove', 'remove', 'remove']);

@@ -1,10 +1,12 @@
-function printNthElement(arr) {
+function printNthElement(elements) {
 
-    let nStep = Number(arr[arr.length - 1]);
-    let newArr = [];
-    for (let i = 0; i < arr.length - 1; i += nStep) {
-        newArr.push(arr[i]);
+    let nStep = Number(elements[elements.length - 1]);
+
+    let resultArr = [];
+
+    for (let i = 0; i < elements.length - 1; i += nStep) {
+        resultArr.push(elements[i]);
     }
-    console.log(newArr.join(' '));
+    console.log(resultArr.join(' '));
 }
 printNthElement(['1', '2', '3', '4', '5', '6']);

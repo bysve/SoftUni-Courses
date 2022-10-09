@@ -1,12 +1,12 @@
-function rotateArray(arr) {
+function rotateArray(elements) {
 
-    let rotations = Number(arr.pop());
+    let rotations = Number(elements.pop());
 
     for (let i = 0; i < rotations; i++) {
-        let rotatedElement = arr.pop();
-        arr.unshift(rotatedElement);
+        let rotatedElement = elements.pop();
+        elements.unshift(rotatedElement);
     }
 
-    console.log(arr.join(' '));
+    console.log(elements.join(' '));
 }
-rotateArray(['Banana', 'Orange', 'Coconut', 'Apple', '15']);
+rotateArray(['1', '2', '3', '4', '2']);
