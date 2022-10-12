@@ -1,23 +1,45 @@
-function tseamAccount(params) {
+function tseamAccount(input) {
+    let games = input[0].split(' ');
+    let inputLength = input.length;
 
-    let account = params[0];
-    let index = 1;
-    let command = params[index];
-    index++;
-    while(command !== 'Play!'){
-        if (command.includes('Install')){
-            console.log(`We ${command}`);
-        } else if (command.includes('Uninstall')){
-            console.log(`${command}`);
-        } else if (command.includes('Update')){
-            console.log(`${command}`);
-        } else if (command.includes('Expansion')){
-            console.log('We add expansion');
+    for (let i = 1; i < inputLength; i++) {
+        let currentElement = input[i].split(' ');
+        let command = currentElement[0];
+        let newGame = currentElement[1];
+
+        switch (command) {
+            case 'Play!':
+                break;
+            case 'Install':
+                if (games.includes(newGame) === false) {
+                    games.push(newGame);
+                }
+                break;
+            case 'Uninstall':
+                if (games.includes(newGame)) {
+                    let index = games.indexOf(newGame);
+                    games.splice(index, 1);
+                }
+                break;
+            case 'Update':
+                if (games.includes(newGame)) {
+                    let index = games.indexOf(newGame);
+                    games.splice(index, 1);
+                    games.push(newGame);
+                }
+                break;
+            case 'Expansion':
+                let expandedGame = newGame.split('-');
+                let gameToExpand = expandedGame[0];
+                if (games.includes(gameToExpand)) {
+                    let index = games.indexOf(gameToExpand);
+                    games.splice(index + 1, 0, expandedGame.join(':'))
+                }
+                break;
         }
-        command = params[index];
-        index++;
     }
 
+    console.log(games.join(' '));
 }
 
 tseamAccount(
@@ -27,5 +49,4 @@ tseamAccount(
         'Update Diablo',
         'Expansion CS-Go',
         'Play!']
-
 )
