@@ -1,11 +1,6 @@
-let array =  ['CS WoW Diablo',
-'Install LoL',
-'Uninstall WoW',
-'Update Diablo',
-'Expansion CS-Go',
-'Play!'];
+let array = [1, 2, 3];
 
-let result = array.slice(0, 2);
+let result = array.split(', ');
 
 
 
