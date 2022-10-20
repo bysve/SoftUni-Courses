@@ -1,3 +1,10 @@
+// Write a function that receives a single number and checks if the grade is excellent or not. 
+// If it is, print "Excellent", otherwise print "Not excellent".
+// Examples
+// Input	Output
+// 5.50	Excellent
+// 4.35	Not excellent
+
 function excellentGrade(grade) {
     
     if(grade >= 5.50){

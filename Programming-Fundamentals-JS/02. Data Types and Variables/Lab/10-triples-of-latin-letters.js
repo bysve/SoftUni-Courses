@@ -1,3 +1,15 @@
+// Write a program that receives a string of number n and print all triples of the first n small Latin letters, ordered alphabetically:
+// Example
+// Input   Output
+// 2	aaa
+//      aab
+//      aba
+//      abb
+//      baa
+//      bab
+//      bba
+//      bbb
+
 function triplesOfLatinLetters(numAsString) {
 
     let num = Number(numAsString);

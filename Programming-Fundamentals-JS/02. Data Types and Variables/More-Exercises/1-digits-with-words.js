@@ -1,3 +1,5 @@
+// Write a function that receives a digit in the form of a word (as a string) and prints the digit (as a number).
+
 function digitsWithWords(word) {
 
     let digit;

@@ -1,3 +1,7 @@
+// Write a function that finds the biggest number.
+// The input comes as 3 parameters.
+// The output is the biggest of the input numbers.
+
 function biggestOfThreeNumbers(first, second, third) {
 
     let biggestNumber = Math.min;

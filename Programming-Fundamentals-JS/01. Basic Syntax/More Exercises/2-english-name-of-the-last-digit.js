@@ -1,3 +1,6 @@
+// Write a function that returns the English name of the last digit of a given number. 
+// Write a program that receives a number and prints the returned value from this function.
+
 function englishNameOfTheLastDigit(num){
 
     let lastDigit = num % 10;

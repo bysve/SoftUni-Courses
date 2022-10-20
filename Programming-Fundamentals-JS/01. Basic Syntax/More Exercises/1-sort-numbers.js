@@ -1,3 +1,5 @@
+// Receive three numbers and you have to sort them in descending order. Print each number on a new line.
+
 function sortNumbers(first, second, third) {
 
     if (first > second && first > third) {
