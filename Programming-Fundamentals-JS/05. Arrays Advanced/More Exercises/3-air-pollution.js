@@ -1,6 +1,6 @@
-function airPollution(matrixOfNums, forces) {
+function airPollution(arrOfNums, forces) {
 
-    let mapOfSofia = matrixOfNums.map(row => row.split(' ').map(x => Number(x)));
+    let mapOfSofia = arrOfNums.map(row => row.split(' ').map(x => Number(x)));
     let arrayLength = forces.length;
 
     let pollutedArea = [];
@@ -14,19 +14,14 @@ function airPollution(matrixOfNums, forces) {
             case 'breeze':
 
                 for (let i = 0; i < mapOfSofia[forceIndex].length; i++) {
-                    mapOfSofia[forceIndex][i] -= 15;
-                    if (mapOfSofia[forceIndex][i] < 0) {
-                        mapOfSofia[forceIndex][i] == 0;
-                    }
+                    //polluted particles in a block cannot go below zero!!!
+                    mapOfSofia[forceIndex][i] = Math.max(0, mapOfSofia[forceIndex][i] - 15);
                 }
                 break;
             case 'gale':
 
                 for (let i = 0; i < mapOfSofia.length; i++) {
-                    mapOfSofia[i][forceIndex] -= 20;
-                    if (mapOfSofia[i][forceIndex] < 0) {
-                        mapOfSofia[i][forceIndex] == 0;
-                    }
+                    mapOfSofia[i][forceIndex] = Math.max(0, mapOfSofia[i][forceIndex] - 20);
                 }
                 break;
             case 'smog':
@@ -46,6 +41,7 @@ function airPollution(matrixOfNums, forces) {
             if (mapOfSofia[row][col] >= 50) {
                 pollutedArea.push(`[${row}-${col}]`)
             }
+
         }
     }
 
@@ -56,10 +52,10 @@ function airPollution(matrixOfNums, forces) {
     }
 }
 
-airPollution(['5 7 72 14 4',
-    '41 35 37 27 33',
-    '23 16 27 42 12',
-    '2 20 28 39 14',
-    '16 34 31 10 24'],
-    ['breeze 1', 'gale 2', 'smog 25']
+airPollution(['5 7 2 14 4',
+    '21 14 2 5 3',
+    '3 16 7 42 12',
+    '2 20 8 39 14',
+    '7 34 1 10 24'],
+    ['breeze 1', 'gale 2']
 );
