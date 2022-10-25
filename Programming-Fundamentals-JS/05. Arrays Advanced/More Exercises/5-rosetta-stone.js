@@ -1,41 +1,38 @@
 function rosettaStone(args) {
 
-    let templateLength = Number(args.shift());
-    let template =  [];
+    let n = Number(args.shift());
 
-    for(let i = 0; i < templateLength; i++){
-       let templateRow = args.shift().split(' ').map(x => Number(x));
-       template.push(templateRow);
+    let code = [];
+    for (i = 0; i < n; i++) {
+        code.push(args.shift().split(' ').map(Number));
     }
 
-    let messageMatrix = args.map(x => x.split(' ').map(x => Number(x)));
-    let messageLength = messageMatrix.length; 
-    
-    let message = [];
+    let matrix = [];
+    for (const row of args) {
+        matrix.push(row.split(' ').map(Number));
+    }
 
-    for(let i = 0; i < templateLength; i += templateLength){
-        let firstRow = [];
-        let seconRow = [];
-        for (let j = 0; j < templateLength; j++){
-            firstRow.push(messageMatrix[i][j]);
-            seconRow.push(messageMatrix[i+1][j]);
+    let result = '';
+
+    for (let row = 0; row < matrix.length; row++) {
+        for (let col = 0; col < matrix[0].length; col++) {
+            let current = matrix[row][col];
+            let modifier = code[row % code.length][col % code[0].length];
+            result += String.fromCharCode(((current + modifier) % 27) + 64);
         }
-        message.push(firstRow, seconRow);
-
-
-
-        console.log(...message);
     }
+    result = result.replace(/@/g, ' ');
+    console.log(result);
 }
-
-rosettaStone(
-        ['2',
-        '59 36',
-        '82 52',
-
-        '4 18 25 19 8',
-        '4 2 8 2 18',
-        '23 14 22 0 22',
-        '2 17 13 19 20',
-        '0 9 0 22 22']
-);
+rosettaStone([1,
+    '1 3 13',
+    '12 22 14 13 25 0 4 24 23',
+    '18 24 2 25 22 0 0 11 18',
+    '8 25 6 26 8 23 13 4 14',
+    '14 3 14 10 6 1 6 16 14',
+    '11 12 2 10 24 2 13 24 0',
+    '24 24 10 14 15 25 18 24 12',
+    '4 24 0 8 4 22 19 22 14',
+    '0 11 18 26 1 19 18 1 15',
+    '8 15 14 26 24 14 26 24 14'])
+    ;
