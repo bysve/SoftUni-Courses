@@ -5,17 +5,13 @@ function cardGame(input) {
     for (const line of input) {
         let [namePlayer, cards] = line.split(': ');
         let cardsArr = cards.split(', ');
-        if (!playerData.hasOnwProperty(namePlayer)) {
-            playerData[namePlayer] = []
+        if (!playerData.hasOwnProperty(namePlayer)) {
+            playerData[namePlayer] = [];
         }
-        cardsArr.forEach(card => {
-            if(playerData[namePlayer].in)
-            playerData[namePlayer] = 
-        });
 
     }
 
-    console.log(playerData);
+    console.log(...playerData);
 }
 
 cardGame([
