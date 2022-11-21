@@ -1,13 +1,10 @@
-let map = new Map();
-map.set('first', 'Svetlana');
-map.set('second', 'Denis');
-map.set('third', 'Toshko');
-map.set('fourth', 'Viki');
-map.get('second');
+let name = 'Pesho:';
+let newName = name.substring(0, name.length-3);
+console.log(newName);
 
 
-let sorted = Array.from(map.entries())
-    .sort((a, b) => a[0].localeCompare(b[0]));
-console.log(...sorted);
+let data = 'John: 2C, 4H, 9H, AS, QS';
 
+let [player, cards] = data.split(': ');
 
+console.log(player);
