@@ -1,0 +1,56 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+nav {
+    background: #234465;
+}
+
+nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10 px 20 px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5 px;
+    margin: 10px;
+    padding: 5px;
+}
+main {
+    margin: 50px 300px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+main header p {
+    font-style: italic;
+}
+
+footer{
+    background: #234465;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}

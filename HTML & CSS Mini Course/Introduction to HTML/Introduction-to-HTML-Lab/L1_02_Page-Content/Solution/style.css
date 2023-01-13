@@ -1,0 +1,13 @@
+body {
+    margin: 100px 300px;
+    font-family: Helvetica, sans-serif;
+    font-size: 17 px;
+}
+
+h1 {
+    text-align: center;
+}
+
+header p {
+    font-style: italic;
+}

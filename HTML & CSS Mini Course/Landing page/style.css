@@ -1,0 +1,136 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*for all page*/
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    color: #50b9e1;
+}
+
+/*navigation*/
+.navigation {
+    padding: 0 20px;
+}
+
+header .site-title {
+    font-size: 26px;
+    display: inline-block;
+    width: 710px;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav ul li:not(:last-child) {
+    padding-right: 15px;
+}
+
+nav ul li a {
+    color: #474747;
+    ;
+}
+
+nav ul li a:hover {
+    color: #50b9e1;
+}
+
+.navigation>nav>ul>li:not(:last-child) {
+    padding-right: 5px;
+}
+
+.navigation>nav>ul>li:nth-child(6)>ul li a i {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/*site-header*/
+.site-header {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+        url("./Images/kids_main.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.site-header h1 {
+    margin: 0;
+    color: white;
+    font-size: 66px;
+    padding: 200px 0 50px 100px;
+    width: 500px;
+    letter-spacing: 2px;
+}
+
+.site-header button {
+    margin: 0 0 200px 100px;
+    padding: 10px 15px;
+    font-size: 26px;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+}
+
+.site-header button:hover {
+    background: #50b9e1;
+    color: white;
+    border-color: #50b9e1;
+}
+
+
+/*main*/
+
+main section h2 {
+    font-family: "PT Serif", serif;
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+/* main-welcome */
+
+.welcome {
+    color: #5a7c8a;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.offerts {
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    background: #43bae3;
+}
+
+.offerts img {
+    width: 70px;
+}
+
+.offerts li {
+    width: 320px;
+    padding: 25px 50px;
+}
+
+.offerts li a {
+    color: white;
+    font-family: "PT Serif", serif;
+}
