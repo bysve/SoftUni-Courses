@@ -1,0 +1,17 @@
+function cooking2(...params) {
+
+    let number = Number(params.shift());
+
+    const functions = {
+        chop() { number /= 2 },
+        dice() { number = Math.sqrt(number) },
+        spice() { number += 1 },
+        bake() { number *= 3 },
+        fillet() { number -= number * 0.20 },
+    }
+
+    params.forEach(command => {functions[command](), console.log(number)});
+}
+
+cooking2('32', 'chop', 'chop', 'chop', 'chop', 'chop');
+cooking2('9', 'dice', 'spice', 'chop', 'bake', 'fillet');
