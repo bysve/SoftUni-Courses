@@ -33,19 +33,15 @@ const products = factory(library, orders);
 console.log(products);
 
 function factory(library, orders) {
-
-    const result = [];
+    const resultArray = [];
 
     for (const order of orders) {
-        const current = Object.assign({}, order.template);
-        for (const part of orders.parts) {
-          current[part] = library[part];
+        const current = Object.assign({}, order.template)
+        for (const part of order.parts) {
+            current[part] = library[part];
         }
-
-        result.push(current);
+        resultArray.push(current);
     }
-
-    console.log(result);
+   return resultArray;
 }
 
-factory();
